@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airline Reservation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Airline Reservation</h1>
+
+    <div class="row">
+      <label for="tripType">Option</label>
+      <select id="tripType">
+        <option value="">--Selected--</option>
+        <option value="oneway">One-way</option>
+        <option value="roundtrip">Round-trip</option>
+        <option value="multicity">Multi-city</option>
+      </select>
+    </div>
+
+    <section id="one_way" class="trip-section hidden">
+      <div class="row wrap">
+        <label for="txtFrom1">From</label>
+        <input id="txtFrom1" type="text" />
+
+        <label for="txtTo1">To</label>
+        <input id="txtTo1" type="text" />
+        <span id="lbloneWay" class="error"></span>
+
+        <label for="txtDepartureDate1">Departure Date</label>
+        <input id="txtDepartureDate1" type="date" />
+        <span id="deptOneLbl" class="error"></span>
+      </div>
+    </section>
+
+    <section id="round_trip" class="trip-section hidden">
+      <div class="row wrap">
+        <label for="txtFrom2">From</label>
+        <input id="txtFrom2" type="text" />
+
+        <label for="txtTo2">To</label>
+        <input id="txtTo2" type="text" />
+        <span id="lbltwoWay" class="error"></span>
+
+        <label for="txtDepartureDate2">Departure Date</label>
+        <input id="txtDepartureDate2" type="date" />
+        <span id="lblDepartDate2" class="error"></span>
+
+        <label for="txtReturnDate">Return Date</label>
+        <input id="txtReturnDate" type="date" />
+        <span id="lblReturnDate2" class="error"></span>
+      </div>
+    </section>
+
+    <section id="multi_city" class="trip-section hidden">
+      <div class="row wrap block">
+        <label for="txtFrom3">From</label>
+        <input id="txtFrom3" type="text" />
+
+        <label for="txtTo3">To</label>
+        <input id="txtTo3" type="text" />
+        <span id="multiWay1" class="error"></span>
+
+        <label for="txtDepartureDate3">Departure Date</label>
+        <input id="txtDepartureDate3" type="date" />
+        <span id="multiWayDept1" class="error"></span>
+      </div>
+
+      <div class="row wrap block">
+        <label for="txtFrom4">From</label>
+        <input id="txtFrom4" type="text" />
+
+        <label for="txtTo4">To</label>
+        <input id="txtTo4" type="text" />
+        <span id="multiWay2" class="error"></span>
+
+        <label for="txtDepartureDate4">Departure Date</label>
+        <input id="txtDepartureDate4" type="date" />
+        <span id="multiWayDept2" class="error"></span>
+      </div>
+    </section>
+
+    <button id="addFlightBtn" type="button">Add Another Flight</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
